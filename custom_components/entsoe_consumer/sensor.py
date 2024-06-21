@@ -11,6 +11,14 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
 
+Entsoe = Entsoe_Class()
+Entsoe.api_key = ''
+Entsoe.country_code = 'NL'
+Entsoe.timezone = 'Europe/Amsterdam'
+Entsoe.supplier_costs = 0.04
+Entsoe.energy_tax = 0.1088
+Entsoe.vat = 21
+result = Entsoe.update_prices_online()
 
 def setup_platform(
     hass: HomeAssistant,
@@ -20,6 +28,9 @@ def setup_platform(
 ) -> None:
     """Set up the sensor platform."""
     add_entities([ExampleSensor()])
+    add_entities([TodayAveragePriceSensor()])
+    add_entities([TodayHighPriceSensor()])
+    add_entities([TodayLowPriceSensor()])
 
 
 class ExampleSensor(SensorEntity):
@@ -36,3 +47,31 @@ class ExampleSensor(SensorEntity):
         This is the only method that should fetch new data for Home Assistant.
         """
         self._attr_native_value = 23
+
+
+class TemplatePriceSensor(SensorEntity):
+    
+    _attr_device_class = SensorDeviceClass.MONETARY
+    _attr_state_class = SensorStateClass.MEASUREMENT
+
+
+class TodayAveragePriceSensor(TemplatePriceSensor):
+    
+    _attr_name = "Entsoe Today Average Price"
+
+    def update(self) -> None:
+        self._attr_native_value = Entsoe.today.average
+
+class TodayHighPriceSensor(TemplatePriceSensor):
+    
+    _attr_name = "Entsoe Today Highest Price"
+
+    def update(self) -> None:
+        self._attr_native_value = Entsoe.today.high
+
+class TodayLowPriceSensor(TemplatePriceSensor):
+    
+    _attr_name = "Entsoe Today Lowest Price"
+
+    def update(self) -> None:
+        self._attr_native_value = Entsoe.today.low
