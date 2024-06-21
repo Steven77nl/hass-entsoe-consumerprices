@@ -1,0 +1,89 @@
+# Testing Files, Folders and Secrets
+/test
+_test*
+.env
+
+# HACS Files and Folders
+hacs.json
+README.md
+
+# Example .gitignore file for your config dir.
+.vscode
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+*__pycache__*
+tts/
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secret.yaml
+secrets.yaml
+known_devices.yaml
+
+# Other secrets and/or DB/info files to ignore
+.HA_VERSION
+plex.conf
+*.log
+*.log.*
+*.db
+*.db-shm
+*.db-wal
+.uuid
+portainer/config.json
+node-red/.config.json.backup
+node-red/.sessions.json
+
+# Backup
+backup/backup.conf
+
+# Helper scripts
+
+# Security
+*.key
+*.pub
+*.pem
+.secrets.env
+
+# deconz
+
+# dockermon
+
+# Home Assistant
+homeassistant/.mercedesme-token-cache
+homeassistant/OZW_Log.txt
+homeassistant/zwcfg_0xe1bc9a5c.xml
+homeassistant/custom_components/**
+!homeassistant/custom_components/variable/**
+homeassistant/themes/**
+homeassistant/www/community/zigbee2mqtt_networkmap/**
+
+# mosquitto
+mosquitto/.passwd
+
+# Node-RED
+node-red/flows_cred.json
+node-red/node_modules/
+node-red/*.backup
+
+# Organizr
+organizr/keys/
+organizr/log/
+organizr/organizr/loginLog.json
+organizr/www/db/organizrLog.json
+organizr/www/db/organizrLoginLog.json
+organizr/www/db/backups/
+
+# portainer
+
+# rtl_433
+rtl_433_aux/analysis_data.ini
+rtl_433_data/
+
+# zigbee2mqtt
+zigbee2mqtt/coordinator_backup.json
+zigbee2mqtt/database.db.backup
+zigbee2mqtt/log
+zigbee2mqtt/state.json

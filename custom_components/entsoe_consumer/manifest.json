@@ -1,0 +1,11 @@
+{
+    "domain": "entsoe_consumer",
+    "name": "ENTSO-e Consumer Prices Integration",
+    "documentation": "https://github.com/Steven77nl/hass-entsoe-consumerprices",
+    "issue_tracker": "https://github.com/Steven77nl/hass-entsoe-consumerprices/issues",
+    "config_flow": false,
+    "codeowners": ["@Steven77nl"],
+    "iot_class": "cloud_polling",
+    "version": "0.1.2",
+    "requirements": ["entsoe-py==0.5.8","pandas==0.3.1"]
+  }
