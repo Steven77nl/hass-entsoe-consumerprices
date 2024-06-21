@@ -7,5 +7,5 @@
     "codeowners": ["@Steven77nl"],
     "iot_class": "cloud_polling",
     "version": "0.1.2",
-    "requirements": ["entsoe-py==0.5.8","pandas==0.3.1"]
+    "requirements": ["entsoe-py==0.5.8"]
   }
