@@ -1,5 +1,5 @@
 from entsoe import EntsoePandasClient
-from functions import get_attributes
+from .functions import get_attributes
 import pandas as pd
 from datetime import datetime
 from datetime import timedelta
