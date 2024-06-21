@@ -36,7 +36,7 @@ elif result == 192:
 else:
     print (f'Incomplete data retrieved, only {result} records, expecting 168 or 192')
 
-print (result, Entsoe.currenthour, Entsoe.nexthour)
+print (Entsoe)
 print ('----')
 
 
@@ -53,5 +53,5 @@ elif result == 3:
 elif result < 192:
     print (f'Not enough offline data for moving to new day, only {result} records')
 
-print (result, Entsoe.currenthour, Entsoe.nexthour)
+print (Entsoe)
 print ('----')
