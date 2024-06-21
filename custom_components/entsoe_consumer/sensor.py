@@ -52,7 +52,7 @@ class ExampleSensor(SensorEntity):
 class TemplatePriceSensor(SensorEntity):
     
     _attr_device_class = SensorDeviceClass.MONETARY
-    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_state_class = SensorStateClass.TOTAL
 
 
 class TodayAveragePriceSensor(TemplatePriceSensor):
