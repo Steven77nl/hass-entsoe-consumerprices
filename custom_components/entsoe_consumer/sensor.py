@@ -41,7 +41,6 @@ def setup_platform(
     add_entities([ExampleSensor()])
 
 
-
 class ExampleSensor(SensorEntity):
     """Representation of a Sensor."""
 
