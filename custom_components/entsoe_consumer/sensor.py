@@ -1,5 +1,5 @@
 from __future__ import annotations
-from entsoe_class import Entsoe_Class
+from .entsoe_class import Entsoe_Class
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
