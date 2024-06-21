@@ -1,0 +1,5 @@
+{
+    "name": "ENTSO-e Consumer Prices Integration",
+    "homeassistant": "2024.1.0",
+    "render_readme": true
+  }

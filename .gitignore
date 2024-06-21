@@ -4,8 +4,8 @@ _test*
 .env
 
 # HACS Files and Folders
-hacs.json
-README.md
+# hacs.json
+# README.md
 
 # Example .gitignore file for your config dir.
 .vscode
