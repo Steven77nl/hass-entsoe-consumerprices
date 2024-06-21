@@ -2,6 +2,7 @@
 /test
 _test*
 .env
+.github.txt
 
 # HACS Files and Folders
 # hacs.json
